@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Requiest from '../requests/types/Requiest';
+import Requiest from '../requests/types/Request';
 import style from './Card.module.css';
 
 type CardProps = {
@@ -72,8 +72,6 @@ function Card(props: CardProps): JSX.Element {
           <div className={style.cardText}>Менеджер: {item.manager}</div>
           <div className={style.cardText}> Имя клиента: {item.name}</div>
           <div className={style.cardText}> {item.date}</div>
-
-        
         </div>
       ) : (
         <>

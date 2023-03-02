@@ -1,4 +1,4 @@
-type Requiest = {
+type Request = {
   contact: string;
   id: string;
   date: string;
@@ -8,6 +8,5 @@ type Requiest = {
   manager: string;
   time: number;
 };
-// type Requiest = any;
 
-export default Requiest;
+export default Request;

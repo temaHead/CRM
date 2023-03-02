@@ -1,15 +1,15 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import * as api from './api';
+import Request from './types/Request';
 import RequestState from './types/RequestState';
-import Requiest from './types/Requiest';
 
 const initialState: RequestState = {
   requests: [],
 };
 
 export const dbLoaded = createAsyncThunk('dbLoaded', async () => {
-  const requiests = await api.getRequiest();
-  return requiests;
+  const requests = await api.getRequest();
+  return requests;
 });
 
 export const requestAdd = createAsyncThunk('requestAdd', async (data: any) => {
@@ -22,7 +22,7 @@ export const requestDeleted = createAsyncThunk('requestDeleted', async (id: stri
   return id;
 });
 
-export const requestChange = createAsyncThunk('requestChange', async (newRequest: {}) => {
+export const requestChange = createAsyncThunk('requestChange', async (newRequest: Request) => {
   const change = await api.changeRequest(newRequest);
   return newRequest;
 });

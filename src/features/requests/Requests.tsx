@@ -1,13 +1,11 @@
-import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
 import { useAppDispatch } from '../../store';
-import { dbLoaded, requestChange, requestDeleted } from './requestsSlice';
-import { selectRequests } from './selectors';
+import {  requestChange, requestDeleted } from './requestsSlice';
 import style from './Requests.module.css';
 import Card from '../card/Card';
 import RequestState from './types/RequestState';
+import Request from './types/Request';
 
-function Requests({ requests }: RequestState, manager: string) {
+function Requests({ requests }: RequestState) {
   const newRequestsAll = requests.filter((el) => el.status === 'Новая').sort((a, b) => a.time - b.time);
   const workRequestsAll = requests.filter((el) => el.status === 'В работе').sort((a, b) => a.time - b.time);
   const processingRequestsAll = requests.filter((el) => el.status === 'В обработке').sort((a, b) => a.time - b.time);
@@ -17,7 +15,7 @@ function Requests({ requests }: RequestState, manager: string) {
   const handleDelete = (id: string): void => {
     dispatch(requestDeleted(id));
   };
-  const handleChange = (newRequest: {}): void => {
+  const handleChange = (newRequest: any): void => {
     dispatch(requestChange(newRequest));
   };
   return (
