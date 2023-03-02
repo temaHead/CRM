@@ -1,0 +1,35 @@
+.navigate {
+  padding: 15px;
+  background-color: rgb(255, 235, 188);
+  display: flex;
+  justify-content: space-between;
+}
+.containerLinks{
+  display: flex;
+}
+.link{
+  margin: 0 10px;
+}
+.manager{
+  display: flex;
+}
+.navBarShow{
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+.linkShow{
+  margin-top: 30px;
+  display: flex;
+}
+.name:hover{
+  cursor: pointer;
+}
+.name{
+  margin-left: 4px;
+  color: #4d2a9a;
+
+}

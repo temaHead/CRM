@@ -1,0 +1,26 @@
+.formBox {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  margin: 15px;
+  justify-content: center;
+}
+.formBox input,
+select,
+button {
+  margin: 15px;
+  padding: 5px;
+  font-size: 20px;
+}
+.containerForm {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.textarea500 {
+  height: 180px;
+  font-size: 20px;
+  margin: 15px;
+  padding: 5px;
+}
